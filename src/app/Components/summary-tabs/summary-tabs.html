@@ -1,0 +1,13 @@
+<div class="summary-container">
+  @for (detail of summaryDetailObj(); track detail) {
+    <div class="summary-item">
+      <div class="icon" [ngClass]="detail?.colorClass">
+        <i [class]="detail?.icon"></i>
+      </div>
+      <div class="summary-content">
+        <div class="summary-value">{{ detail?.label }}</div>
+        <div class="summary-label">{{ detail?.labelName }}</div>
+      </div>
+    </div>
+  }
+</div>

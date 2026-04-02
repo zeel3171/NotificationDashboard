@@ -1,0 +1,25 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    min-height: calc(100vh - 70px);
+    
+    @media (max-width: 800px) {
+        grid-template-columns: 100%;
+    }
+}
+
+.side {
+    height: 100%;
+    @media (max-width: 800px) {
+        display: none;
+    }
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

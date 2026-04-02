@@ -1,0 +1,78 @@
+<div class="dashboard-container">
+    <div class="dashboard-header margin-top">
+        <h2>NotifiCation</h2>
+    </div>
+
+    <div class="month-tabs margin-top">
+        <app-month-tabs (onMonthYearChange)="onMonthYearChange($event)"></app-month-tabs>
+    </div>
+
+    <div class="summary-tabs margin-top">
+        <app-summary-tabs></app-summary-tabs>
+    </div>
+
+  <div class="table-container margin-top">
+  @if (hasMonthData()) {
+    <div class="header">
+      <div class="search-field">
+        <input
+          type="text"
+          name="search"
+          id="search"
+          [ngModel]="searchTerm()"
+          (ngModelChange)="searchTerm.set($event)"
+          placeholder="Search..."
+        />
+        <div class="search-icon">
+          <i class="bx bx-search"></i>
+        </div>
+      </div>
+      <div class="btns">
+        <button (click)="markAsRead()"><i class="bx bx-paper-plane"></i> Read [{{ totalReadCount()}}]</button>
+        <button (click)="markAsUnread()">Unread</button>
+      </div>
+    </div>
+
+    <div class="custom-table-wrapper margin-top">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-checkbox"><input type="checkbox" [disabled]="allNotificationRead()" [(ngModel)]="selectAllNotifications" (change)="onAllMarkAsRead($event)" /></th>
+            <th>Notification</th>
+            <th class="custom-width">Date</th>
+            <th class="custom-width">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of filteredNotifications(); track item?.notificationId) {
+            <tr>
+              <td class="col-checkbox"><input type="checkbox" [disabled]="item?.isNotificationAlreadyRead || false" [(ngModel)]="item.isNotificationMarkedAsRead" (change)="onMarkAsRead($event,item)" /></td>
+              <td>
+                <div class="notification-content">
+                  <img [src]="item?.profile" alt="profile" class="avatar" />
+                  <div class="text-content">
+                    <div class="title" [title]="item?.notification || ''">{{ item?.notification }}</div>
+                    <div class="subtitle">{{ item?.name }}</div>
+                  </div>
+                </div>
+              </td>
+              <td>{{ item?.notificationDate }}</td>
+              <td>{{ item?.notificationStatus | capitalize}}</td>
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="4" class="empty-state">No notifications found!.</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  } @else {
+    <div class="no-data-screen margin-top">
+      <i class="bx bx-folder-open" ></i>
+      <h3>No Data Available</h3>
+      <p>There are no notifications for the selected month.</p>
+    </div>
+  }
+</div>
+</div>

@@ -1,0 +1,14 @@
+@use '../../../styles/variables' as *;
+
+.footer{
+    color: $text-muted;
+    margin: 10px 0;
+    text-align: center;
+    a{
+        color: $text-muted;
+        text-decoration: none;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+}

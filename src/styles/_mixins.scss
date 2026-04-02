@@ -1,0 +1,30 @@
+@use '../styles/variables' as *;
+
+@mixin flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-start{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+@mixin sub-container{
+    background-color: $white;
+    border-radius: $border-radius;
+    padding: 0.625rem;
+    
+    @media (max-width: 800px) {
+        padding: 0.5rem;
+    }
+}

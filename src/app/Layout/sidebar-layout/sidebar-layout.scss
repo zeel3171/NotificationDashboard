@@ -1,0 +1,12 @@
+@use '../../../styles/variables' as *;
+
+:host {
+    display: block;
+    height: 100%;
+}
+
+.sidebar{
+    background-color: $primary-color;
+    height: 100%;
+    width: 100%;
+}

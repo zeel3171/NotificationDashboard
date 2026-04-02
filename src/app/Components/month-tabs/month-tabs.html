@@ -1,0 +1,16 @@
+<div class="months-container">
+    <div class="months">
+        @for(month of monthsList(); track month?.value){
+        <button type="button" (click)="onMonthChange(month.value)" [class.active]="selectedMonth == month.value" [disabled]="isMonthDisabled(month.value)">
+            {{ month.label }}
+        </button>
+        }
+    </div>
+    <div class="years">
+        <select [(ngModel)]="selectedYear" id="year" (change)="onYearChange()">
+            @for(year of yearsList(); track year){
+                <option [value]="year">{{ year }}</option>
+            }
+        </select>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+{
+"2026": [
+{ "month": "Jan 2026", "hasNotification": true, "monthIndex": 1 },
+{ "month": "Feb 2026", "hasNotification": false, "monthIndex": 2 },
+{ "month": "Mar 2026", "hasNotification": true, "monthIndex": 3 },
+{ "month": "Apr 2026", "hasNotification": false, "monthIndex": 4 },
+{ "month": "May 2026", "hasNotification": false, "monthIndex": 5 },
+{ "month": "Jun 2026", "hasNotification": false, "monthIndex": 6 },
+{ "month": "Jul 2026", "hasNotification": false, "monthIndex": 7 },
+{ "month": "Aug 2026", "hasNotification": false, "monthIndex": 8 },
+{ "month": "Sep 2026", "hasNotification": false, "monthIndex": 9 },
+{ "month": "Oct 2026", "hasNotification": false, "monthIndex": 10 },
+{ "month": "Nov 2026", "hasNotification": false, "monthIndex": 11 },
+{ "month": "Dec 2026", "hasNotification": false, "monthIndex": 12 }
+],
+"2025": [
+{ "month": "Jan 2025", "hasNotification": false, "monthIndex": 1 },
+{ "month": "Feb 2025", "hasNotification": true, "monthIndex": 2 },
+{ "month": "Mar 2025", "hasNotification": false, "monthIndex": 3 },
+{ "month": "Apr 2025", "hasNotification": true, "monthIndex": 4 },
+{ "month": "May 2025", "hasNotification": false, "monthIndex": 5 },
+{ "month": "Jun 2025", "hasNotification": true, "monthIndex": 6 },
+{ "month": "Jul 2025", "hasNotification": true, "monthIndex": 7 },
+{ "month": "Aug 2025", "hasNotification": false, "monthIndex": 8 },
+{ "month": "Sep 2025", "hasNotification": false, "monthIndex": 9 },
+{ "month": "Oct 2025", "hasNotification": true, "monthIndex": 10 },
+{ "month": "Nov 2025", "hasNotification": false, "monthIndex": 11 },
+{ "month": "Dec 2025", "hasNotification": true, "monthIndex": 12 }
+],
+"2024": [
+{ "month": "Jan 2024", "hasNotification": false, "monthIndex": 1 },
+{ "month": "Feb 2024", "hasNotification": false, "monthIndex": 2 },
+{ "month": "Mar 2024", "hasNotification": false, "monthIndex": 3 },
+{ "month": "Apr 2024", "hasNotification": false, "monthIndex": 4 },
+{ "month": "May 2024", "hasNotification": true, "monthIndex": 5 },
+{ "month": "Jun 2024", "hasNotification": true, "monthIndex": 6 },
+{ "month": "Jul 2024", "hasNotification": false, "monthIndex": 7 },
+{ "month": "Aug 2024", "hasNotification": true, "monthIndex": 8 },
+{ "month": "Sep 2024", "hasNotification": false, "monthIndex": 9 },
+{ "month": "Oct 2024", "hasNotification": false, "monthIndex": 10 },
+{ "month": "Nov 2024", "hasNotification": true, "monthIndex": 11 },
+{ "month": "Dec 2024", "hasNotification": true, "monthIndex": 12 }
+]
+}

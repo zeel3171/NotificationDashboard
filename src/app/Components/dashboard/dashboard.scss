@@ -1,0 +1,194 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.dashboard-container{
+    padding: 20px;
+    background-color: $bg-color;
+    
+    .dashboard-header{
+        font-weight: 500;
+        font-family: 'Poppins';
+        
+        @media (max-width: 800px) {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.margin-top{
+    margin-top: $margin-top;
+}
+
+
+.table-container {
+  .header {
+    @include flex-between;
+    @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .search-field {
+      max-width: 12rem;
+      width: 100%;
+      position: relative;
+      
+      @media (max-width: 800px) {
+          max-width: 100%;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.5rem 2rem 0.5rem 0.5rem;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        box-sizing: border-box;
+
+        &:focus {
+          outline: none;
+          border-color: $primary-color;
+        }
+
+        &::placeholder {
+          color: $text-muted;
+        }
+      }
+
+      .search-icon {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        width: 1rem;
+        height: 1rem;
+        pointer-events: none;
+        color: $text-muted;
+      }
+    }
+
+    .btns {
+      display: flex;
+      gap: 0.5rem;
+      
+      button {
+        padding: 0.5rem 0.7rem;
+        border-radius: $border-radius;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        background-color: $white; 
+        cursor: pointer;
+        
+        @media (max-width: 800px) {
+            flex-grow: 1;
+        }
+      }
+    }
+  }
+}
+
+.custom-table-wrapper {
+  @include sub-container;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  overflow-x: auto;
+  
+  table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+  
+  @media (max-width: 800px) {
+      white-space: nowrap;
+      font-size: 11px;
+  }
+
+  thead {
+    background-color: $table-header; 
+  }
+
+  th {
+    padding: 0.75rem;
+    font-weight: 600;
+  }
+
+  td {
+    padding: 0.75rem;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .col-checkbox {
+    width: 3rem;
+    text-align: center;
+    input{
+      cursor: pointer;
+      accent-color: $primary-color;
+    }
+  }
+ }
+}
+
+.custom-width {
+  width: 15%;
+}
+
+.notification-content {
+  @include flex-start;
+  gap: 0.75rem;
+
+  .avatar {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .text-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 30rem;
+    
+    @media (max-width: 800px) {
+        max-width: 10rem;
+    }
+  }
+
+  .subtitle {
+    font-size: 12px;
+    color: $text-muted;
+  }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2.5rem;
+  color: $text-muted;
+}
+
+.no-data-screen{
+    @include flex-center;
+    flex-direction: column;
+    padding: 5rem 2rem;
+    i{
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        color: $text-muted;
+    }
+    h3{
+        margin: 0 0 0.5rem 0;
+    }
+    p{
+        margin: 0;
+        text-align: center;
+        color: $text-muted;
+    }
+}
+
+
