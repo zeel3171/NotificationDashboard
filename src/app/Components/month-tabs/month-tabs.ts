@@ -25,6 +25,8 @@ export class MonthTabs implements OnInit {
     { label: 'Nov', value: 11 },
     { label: 'Dec', value: 12 },
   ]);
+  pastLastYear = 2024;
+  pastLastMonth = 5;
 
   selectedYear = new Date().getFullYear();
   selectedMonth = new Date().getMonth() + 1;
@@ -54,7 +56,11 @@ export class MonthTabs implements OnInit {
 
   onYearChange() {
     this.selectedMonth =
-      this.selectedYear == new Date().getFullYear() ? new Date().getMonth() + 1 : 1;
+      this.selectedYear == new Date().getFullYear()
+        ? new Date().getMonth() + 1
+        : this.selectedYear == this.pastLastYear
+          ? this.pastLastMonth
+          : 1;
     this.onMonthYearChange.emit({ month: this.selectedMonth, year: this.selectedYear });
   }
 
@@ -66,7 +72,7 @@ export class MonthTabs implements OnInit {
 
   isMonthDisabled(month: number): boolean {
     return (
-      (this.selectedYear <= 2024 && month < this.currentMonth + 1) ||
+      (this.selectedYear <= this.pastLastYear && month < this.pastLastMonth) ||
       (this.selectedYear >= this.currentYear && month > this.currentMonth)
     );
   }
