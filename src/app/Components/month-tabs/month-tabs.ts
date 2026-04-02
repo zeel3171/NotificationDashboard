@@ -54,7 +54,11 @@ export class MonthTabs implements OnInit {
 
   onYearChange() {
     this.selectedMonth =
-      this.selectedYear == new Date().getFullYear() ? new Date().getMonth() + 1 : 1;
+      this.selectedYear == new Date().getFullYear()
+        ? new Date().getMonth() + 1
+        : this.selectedYear == 2024
+          ? 5
+          : 1;
     this.onMonthYearChange.emit({ month: this.selectedMonth, year: this.selectedYear });
   }
 
@@ -66,7 +70,7 @@ export class MonthTabs implements OnInit {
 
   isMonthDisabled(month: number): boolean {
     return (
-      (this.selectedYear <= 2024 && month < this.currentMonth + 1) ||
+      (this.selectedYear <= 2024 && month < 5) ||
       (this.selectedYear >= this.currentYear && month > this.currentMonth)
     );
   }
