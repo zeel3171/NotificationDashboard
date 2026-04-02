@@ -12,8 +12,7 @@ Simple Angular dashboard to view and manage notifications.
 
 ## Challenges
 
-- Handling local JSON data and filtering by date (month/year)
-- Making table responsive with horizontal scroll
+- Handling and Importing JSON data.
 - Adjusting layout for smaller screens
 
 ## Setup
