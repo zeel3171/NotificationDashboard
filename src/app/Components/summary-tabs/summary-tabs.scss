@@ -5,7 +5,7 @@
  @include sub-container;   
   display: grid;
   justify-content: start;
-  grid-template-columns: repeat(auto-fit, 220px);
+  grid-template-columns: repeat(auto-fit, 215px);
   gap: 1rem;
   font-size: 14px;
 }
